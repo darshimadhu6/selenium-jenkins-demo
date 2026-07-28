@@ -1,24 +1,25 @@
 package com.madhu.tests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class GoogleTest {
 
     @Test
     public void openGoogle() {
 
-        WebDriverManager.firefoxdriver().setup();
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        //WebDriverManager.firefoxdriver().setup();
 
-        FirefoxOptions options = new FirefoxOptions();
+        //FirefoxOptions options = new FirefoxOptions();
 
-        options.addArguments("--headless");
+        //ptions.addArguments("--headless");
 
-        WebDriver driver = new FirefoxDriver(options);
+        //WebDriver driver = new FirefoxDriver();
 
         driver.manage().window().maximize();
 
