@@ -5,6 +5,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class GoogleTest {
 
@@ -13,7 +14,11 @@ public class GoogleTest {
 
         WebDriverManager.firefoxdriver().setup();
 
-        WebDriver driver = new FirefoxDriver();
+        FirefoxOptions options = new FirefoxOptions();
+
+        options.addArguments("--headless");
+
+        WebDriver driver = new FirefoxDriver(options);
 
         driver.manage().window().maximize();
 
