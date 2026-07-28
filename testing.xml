@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Jenkins Demo Suite">
+
+    <test name="Google Test">
+
+        <classes>
+
+            <class name="com.madhu.tests.GoogleTest"/>
+
+        </classes>
+
+    </test>
+
+</suite>
