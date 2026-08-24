@@ -26,7 +26,7 @@ public class GoogleTest {
         driver.get("https://www.google.com");
         
         Assert.assertTrue(
-                driver.getTitle().contains("THIS_WILL_FAIL"),
+                driver.getTitle().contains("Google"),
                 "Google title validation failed"
             );
 
