@@ -2,6 +2,7 @@ package com.madhu.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -23,6 +24,11 @@ public class GoogleTest {
         driver.manage().window().maximize();
 
         driver.get("https://www.google.com");
+        
+        Assert.assertTrue(
+                driver.getTitle().contains("THIS_WILL_FAIL"),
+                "Google title validation failed"
+            );
 
         System.out.println("Google opened successfully");
 
